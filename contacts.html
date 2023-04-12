@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DiagnostiQ</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		
+		<!-- metas -->
+		<meta charset="utf-8">
+		<meta name="author" content="http://themeforest.net/user/CreativeWS/portfolio">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<!--/ metas -->
+		
+		<!-- styles -->
+		<link rel="stylesheet" type="text/css" href="css/layerslider.css">
+		<link rel="stylesheet" type="text/css" href="css/fullwidth/skin.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/color-blue.css">
+		
+		<!--/ styles -->
+		<!-- page header -->
+		<script>
+      	$(function(){
+	     $("#header").load("header.html");
+	    
+	     $("#footer").load("footer.html");
+      	});
+    	</script>
+		<!--[if lt IE 9]><script src="js/html5.js"></script><![endif]-->
+	</head>
+	
+	<body>
+		<div class="page">
+
+			<!-- page header -->
+			<div id="header"></div>
+			<!--/ page header -->
+			
+			<!-- quick search -->
+			<form id="quick-search" class="quick-search">
+				<fieldset>
+					<legend>Quick Search:</legend>
+					
+					<input type="text" placeholder="Search by name" id="docname" name="docname" class="ui-autocomplete-input" autocomplete="off">
+					
+					<select>
+						<option value="0">Speciality</option>
+						<option value="1">Ophthomologist</option>
+						<option value="2">Dermatologist</option>
+						<option value="3">Neorologist</option>
+						<option value="4">Surgeon</option>
+					</select>
+					
+					<select>
+						<option value="0">Locations</option>
+						<option value="1">Primary Health Care</option>
+						<option value="2">Gynaecological Clinic</option>
+						<option value="3">Diagnosis With Precise</option>
+						<option value="4">Cardiac Clinic</option>
+						<option value="5">General Surgery</option>
+					</select>
+					
+					<button type="submit">Search</button>
+					<div class="switcher">
+						<button id="quick-search-switcher" type="button">Find a doctor</button>
+					</div>
+				</fieldset>				
+			</form>
+			<!--/ quick search -->
+
+			<!-- page title -->
+			<section class="page-title">
+				<div class="grid-row clearfix">
+					<h1>Contacts</h1>
+					
+					<nav class="bread-crumbs">
+						<a href="index.html">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;
+						<a href="#">Contacts</a>
+					</nav>
+				</div>
+			</section>
+			<!--/ page title -->
+			
+			<!-- page content -->
+			<main class="page-content">
+		
+				
+				<div class="grid-row">
+					<div class="grid-col grid-col-9">
+						<!-- feedback -->
+						<article class="feedback">
+							<div class="widget-title">Get in touch by filling the form below</div>
+										
+							<p>Donec lacinia suscipit magna, et pulvinar tortor facilisis quis. Donec tempor erat vel scelerisque posuere. Nam elementum elit eget tellus faucibus euismod. Aliquam turpis nibh, dictum eu consequat ac, facilisis eu elit. Pellentesque pellentesque orci quam, nec tempus nibh congue ut. Pellentesque tempus vehicula lectus eget tempor. Donec suscipit enim dui, ut sagittis orci rhoncus id.</p>
+							
+							<form action="php/contact-send.php" id="contactform">
+								<fieldset>
+									<div class="clearfix">
+										<div class="input">
+											<label>Your name:</label>
+											<input type="text" name="name">
+										</div>
+										<div class="input">
+											<label>Your email:</label>
+											<input type="text" name="email">
+										</div>
+									</div>
+									<div class="clearfix">
+										<div class="input">
+											<label>Category:</label>
+											<input type="text" name="category">
+										</div>
+										<div class="input">
+											<label>Subject:</label>
+											<input type="text" name="subject">
+										</div>
+									</div>
+									<label>Message:</label>
+									<textarea rows="6" name="message"></textarea>
+									<div class="clearfix captcha">
+											<div class="captcha-wrapper">
+												<!-- <iframe src="php/capcha.php" class="capcha-frame" name="capcha_image_frame" marginwidth="0" marginheight="0" frameborder="0"></iframe> -->
+
+												<input class="verify" type="text" id="verify" name="verify" />
+											</div>
+											<button type="submit" class="button" value="Submit">Submit</button>
+											
+									</div>
+								</fieldset>
+							</form>							
+						</article>
+						<!--/ feedback -->
+					</div>
+					
+					<div class="grid-col grid-col-3">						
+						<!-- contacts -->
+						<section class="widget widget-contacts">
+							<div class="widget-title">Contact Details</div>
+							<dl>
+								<dt class="opened">Adolescent Gynecology</dt>
+								<dd>
+									<ul>
+										<li><i class="fa fa-map-marker"></i>365 Montauk Avenue</li>
+										<li><i class="fa fa-phone"></i>Call us: 203-284-2818</li>
+										<li><i class="fa fa-envelope"></i>E-mail: clinico@domain.com</li>
+									</ul>
+								</dd>
+								<dt>Breast Cancer Gene (BRCA)</dt>
+								<dd>
+									<ul>
+										<li><i class="fa fa-map-marker"></i>365 Montauk Avenue</li>
+										<li><i class="fa fa-phone"></i>Call us: 203-284-2818</li>
+										<li><i class="fa fa-envelope"></i>E-mail: clinico@domain.com</li>
+									</ul>
+								</dd>
+								<dt>Replacement Therapy</dt>
+								<dd>
+									<ul>
+										<li><i class="fa fa-map-marker"></i>365 Montauk Avenue</li>
+										<li><i class="fa fa-phone"></i>Call us: 203-284-2818</li>
+										<li><i class="fa fa-envelope"></i>E-mail: clinico@domain.com</li>
+									</ul>
+								</dd>
+								<dt>Diagnosis With Precise</dt>
+								<dd>
+									<ul>
+										<li><i class="fa fa-map-marker"></i>365 Montauk Avenue</li>
+										<li><i class="fa fa-phone"></i>Call us: 203-284-2818</li>
+										<li><i class="fa fa-envelope"></i>E-mail: clinico@domain.com</li>
+									</ul>
+								</dd>
+								<dt>STD Screening</dt>
+								<dd>
+									<ul>
+										<li><i class="fa fa-map-marker"></i>365 Montauk Avenue</li>
+										<li><i class="fa fa-phone"></i>Call us: 203-284-2818</li>
+										<li><i class="fa fa-envelope"></i>E-mail: clinico@domain.com</li>
+									</ul>
+								</dd>
+								<dt>Occupational Health</dt>
+								<dd>
+									<ul>
+										<li><i class="fa fa-map-marker"></i>365 Montauk Avenue</li>
+										<li><i class="fa fa-phone"></i>Call us: 203-284-2818</li>
+										<li><i class="fa fa-envelope"></i>E-mail: clinico@domain.com</li>
+									</ul>
+								</dd>
+								<dt>Rhinosinusitis</dt>
+								<dd>
+									<ul>
+										<li><i class="fa fa-map-marker"></i>365 Montauk Avenue</li>
+										<li><i class="fa fa-phone"></i>Call us: 203-284-2818</li>
+										<li><i class="fa fa-envelope"></i>E-mail: clinico@domain.com</li>
+									</ul>
+								</dd>
+							</dl>
+						</section>
+						<!--/ contacts -->
+						
+						<!-- follow -->
+						<section class="widget widget-follow">
+							<ul>
+								<li><a href="#"><i class="fa fa-rss"></i>150<br>Subscribers</a></li>
+								<li><a href="#"><i class="fa fa-facebook"></i>5560<br>Fans</a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i>2300<br>Followers</a></li>
+							</ul>
+						</section>
+						<!--/ follow -->
+					</div>
+				</div>
+			</main>
+			<!--/ page content -->
+
+			<!-- page footer -->
+			 <div id="footer"></div>
+			<!--/ page footer -->
+			
+			<!-- copyrights -->
+			<div class="copyrights">Copyrights ©2023: DiagnostiQ</div>
+			<!--/ copyrights -->
+
+		</div>
+		
+		<!-- scripts -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.migrate.min.js"></script>
+		<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+		<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+		<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+		<script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
+		<script type="text/javascript" src="js/jquery.flot.js"></script>
+		<script type="text/javascript" src="js/jquery.flot.pie.js"></script>
+		<script type="text/javascript" src="js/jquery.flot.categories.js"></script>
+		<script type="text/javascript" src="js/greensock.js"></script>
+		<script type="text/javascript" src="js/layerslider.transitions.js"></script>
+		<script type="text/javascript" src="js/layerslider.kreaturamedia.jquery.js"></script>
+
+	<!-- Superscrollorama -->		
+		<script type="text/javascript" src="js/jquery.superscrollorama.js"></script>
+		<script type="text/javascript" src="js/TweenMax.min.js"></script>
+		<script type="text/javascript" src="js/TimelineMax.min.js"></script>
+	<!--/ Superscrollorama -->
+	
+		<script type="text/javascript" src="js/jquery.ui.core.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.widget.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.tabs.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-tabs-rotate.js"></script>
+		<script type="text/javascript" src="js/jquery.ui.accordion.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tweet.js"></script>
+	<!-- EASYPIECHART -->
+		<script type="text/javascript" src="js/jquery.easypiechart.js"></script>
+	<!--/ EASYPIECHART -->
+		<script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+		<!--/ scripts -->
+		
+	</body>
+</html>

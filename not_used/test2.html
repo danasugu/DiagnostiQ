@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+     
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internationalization Example</title>
+</head>
+<body>
+
+  <p data-i18n="someText"></p>
+<p data-i18n="someText">someText Message</p>`
+
+<p data-i18n="someText"><img src="" alt=""> </p>
+<p data-i18n="someText"><img src="" alt=""> someText Message</p>`
+
+<p><span data-i18n="someText"></span></p>
+<p><span data-i18n="someText">someText Message</span></p>`
+
+<script>
+// ----------------- Internationalization (Side Effect) ----
+import './i18n.js';
+class I18n {
+
+    constructor() {
+      document.querySelectorAll('template').forEach(item => this.set(item.content));
+      this.set();
+    }
+
+    set(target = document) {
+      target.querySelectorAll('[data-i18n]').forEach(node => {
+        let [text, attr] = node.dataset.i18n.split('|');
+        text = browser.i18n.getMessage(text);
+        attr ? node.setAttribute(attr, text) : node.append(text);
+      });
+    }
+}
+new I18n();
+</script>
+
+</body>
+</html>

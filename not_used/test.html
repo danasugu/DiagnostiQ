@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="lang.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internationalization Example</title>
+</head>
+<body>
+    <h1 id="title"></h1>
+    <p id="description"></p>
+    <h3 id="test"></h3>
+
+     <button id="switchToEnglish">English</button>
+     <button id="switchToRomanian">Română</button>
+
+<iframe src="https://chat.berri.ai/aHR0cHM6Ly9zaGFyZWRkYnN0b3JlcXVlcnktN2JlYS04aGp3LnplZXQtYmVycmkuemVldC5hcHAvYmVycmlfcXVlcnk_cHJval9wYXRoPWluZGV4ZXMvZGFuYS5zdWd1QGdtYWlsLmNvbS81ZDQ0N2YzOS00YTU2LTRkMDYtYTM0OS01NjFlMzkyMTFlMWYmcHJval9uYW1lPVRTQSBFUFJPT0YtMDk2MzA4MzkwMl9kZWNyeXB0ZWQuZG9jeA==" width='800px', height='500px'>
+
+    <script src="i18n.js"></script>
+   
+	<script>
+// Define language translations
+const translations = {
+  en: {
+    home: "Home",
+    description: "This is an example of an i18n-enabled website.",
+    test: "This is a test.",
+  },
+  ro: {
+    home: "Acasa",
+    description: "Acesta este un exemplu de site web cu suport i18n.",
+    test: "Acesta este un test.",
+  },
+};
+
+
+// Create a function to update the text content of the HTML elements based on the selected language.
+
+function updateLanguage(lang) {
+  document.getElementById("title").textContent = translations[lang].title;
+  document.getElementById("description").textContent = translations[lang].description;
+  document.getElementById("test").textContent = translations[lang].test;
+}
+
+
+// Switch language
+function switchLanguage() {
+    const currentLanguage = detectLanguage();
+    const newLanguage = currentLanguage === 'en' ? 'ro' : 'en';
+    applyTranslations(newLanguage);
+}
+
+// Set the default language. Call the updateLanguage() function to set the default language // (e.g., English) when the page loads.
+
+updateLanguage("ro");
+
+// Add event listeners
+// Attach event listeners to the buttons to switch between English and Romanian languages
+
+document.getElementById("switchToEnglish").addEventListener("click", () => {
+  updateLanguage("en");
+});
+
+document.getElementById("switchToRomanian").addEventListener("click", () => {
+  updateLanguage("ro");
+});
+
+	</script>
+</body>
+</html>

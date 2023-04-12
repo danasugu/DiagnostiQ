@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  
+<body>
+ 
+<div>
+  <label for="userQuery">Enter your query:</label>
+  <input type="text" id="userQuery" name="userQuery" required>
+  <button type="button" onclick="queryAPI()">Submit</button>
+</div>
+
+<div id="responseContainer"></div>
+
+<script>
+  function queryAPI() {
+    const userQuery = document.getElementById("userQuery").value;
+    const apiEndpoint = "https://api.example.com/";
+
+    const finalUrl = apiEndpoint + encodeURIComponent(userQuery);
+
+    fetch(finalUrl)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        // Update HTML with response data
+        const responseContainer = document.getElementById("responseContainer");
+        responseContainer.innerHTML = `
+          <p>System response: ${data.response}</p>
+        `;
+      })
+      .catch((error) => {
+        console.error(error);
+        // Handle errors here
+      });
+  }
+</script>
+
+
+</body>
+</html>
